@@ -1,0 +1,38 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say thanks anytime the user says thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+# #rule active form
+- rule: check student_id anytime the user provide id
+  steps:
+  - intent: provide_student_id
+  - action: action_validate_student_id
+  - slot_was_set:
+    - id_student: "valid_student_id"
+
+# - rule: check subject_id anytime the user provide id
+#   steps:
+#   - intent: provide_subject_id
+#   - action: action_validate_subject_id
+#   - slot_was_set:
+#     - id_student: "valid_subject_id"
+
+#deactive rule
+- rule: submit_student_id_form
+  condition:
+  - active_loop: student_id_form
+  steps:
+  - action: student_id_form
+  - active_loop: null
+  - slot_was_set: 
+    - id_student: "<student_id>"
+  - action: utter_ask_subject_id

@@ -1,0 +1,80 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - xin chào
+    - ê
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - bye bye
+    - see you later
+    - tạm biệt
+    - chào tạm biệt
+
+- intent: affirm
+  examples: |
+    - yes
+    - có
+    - phải
+    - tất nhiên rồi
+    - được đấy
+    - chính xác
+    - đúng vậy
+    - đúng
+
+- intent: deny
+  examples: |
+    - no
+    - không
+    - tôi không nghĩ vậy
+    - không phải
+    - không hẳn
+
+- intent: adress
+  examples: |
+    - Trường ở đâu?
+    - Địa chỉ trường?
+    - Trường VJU ở đâu?
+    
+- intent: thanks
+  examples: |
+    - cảm ơn
+    - cảm ơn bạn
+    - Tks
+    - thank you
+    - thanks
+
+- intent: provide_student_id
+  examples: |
+    - [21110087](student_id)
+    - Mã sinh viên của tôi là [21220012](student_id)
+    - msv [22110078](student_id)
+    - là [23220089](student_id)
+
+- intent: provide_subject_id
+  examples: |
+    - [MAT312](subject_id)
+    - [POL1001](subject_id)
+    - [VJU2002](subject_id)
+    - [AET2014](subject_id)
+    - [CSE3022](subject_id)
+    - [JPS3038](subject_id)
+
+- intent: request_regis_subject
+  examples: |
+    - Tôi muốn đăng ký tín chỉ
+    - Tôi muốn đăng ký môn học
+    - Đăng ký tín chỉ
+    - Đăng ký học
+
+- intent: check_db
+  examples: |
+    - check my connect db
+    - connect db
